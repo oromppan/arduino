@@ -1,0 +1,18 @@
+int kirkkaus = 0;
+void setup(){
+pinMode(9, OUTPUT);
+Serial.begin(9600);
+}
+
+  
+
+
+void loop(){
+ analogWrite(9, kirkkaus);
+kirkkaus = kirkkaus + 1;
+if(kirkkaus > 255){
+  kirkkaus = 0;
+}
+delay(100);
+Serial.println(kirkkaus);
+}
