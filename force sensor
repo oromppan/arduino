@@ -11,6 +11,8 @@ void setup(){
 void loop(){
 sensorVal = analogRead(sensorPin);
   Serial.println(sensorVal);
+  // sensorVal = map(sensorVal,0,1023,0,255);
+  analogWrite(ledPin,sensorVal/4);
   delay(10);
   
 }
