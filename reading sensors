@@ -1,5 +1,6 @@
 int sensorVal = 0;
 int sensorLight = 0;
+int sensorForce = 0;
 
 void setup() {
 Serial.begin(9600);
@@ -9,10 +10,14 @@ Serial.begin(9600);
 void loop() {
 sensorVal = analogRead(A0);
 sensorLight = analogRead(A1);
+sensorForce = analogRead(A2);
 Serial.print("Potentiometri");
 Serial.println(sensorVal);
 Serial.print("Valovastus");
 Serial.println(sensorLight);
+Serial.print("Paineentunnistin");
+Serial.println(sensorForce);
+
 delay(1000);
   
   
